@@ -20,8 +20,8 @@ class Result {
 
     public static void miniMaxSum(List<Integer> arr) {
     // Write your code here
-    int max=arr.get(0),min=arr.get(0),sum=0;
-    for(int i=0;i<arr.size();i++){
+    int max=arr.get(0),min=arr.get(0);long sum=arr.get(0);
+    for(int i=1;i<arr.size();i++){
         sum+=arr.get(i);
         
         if(arr.get(i)>max){
@@ -31,9 +31,8 @@ class Result {
             min=arr.get(i);
         }
     }
-    int n= sum-max;
-    int m = sum-min;
-    System.out.print(n+" "+m);
+    
+    System.out.print((sum-max)+" "+(sum-min));
     
 
     }
